@@ -1,6 +1,6 @@
 # BetterCommerce Stripe NodeJS SDK
 
-BetterCommerce's Stripe NodeJS SDK enables BC client applications to integrate with Stripe merchant API system.
+BetterCommerce's Stripe NodeJS SDK enables BC client applications to integrate with Stripe merchant API system. It publishes an interface to interact with [Stripe API v1](https://stripe.com/docs/api) endpoints.
 
 Use below command for package installation:
 
