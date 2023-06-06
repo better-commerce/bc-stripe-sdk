@@ -4,6 +4,12 @@ import { sanitizeAmount } from "../utils/app-util";
 
 export class Payment implements IPayment {
 
+    /**
+     * Create a PaymentIntent. Creates a PaymentIntent object.
+     * API Reference - https://stripe.com/docs/api/payment_intents/create
+     * @param data {Object}
+     * @returns 
+     */
     async initIntent(data: any): Promise<any> {
         try {
             const secretKey = StripeEnvironment.getSecretKey();
@@ -15,6 +21,12 @@ export class Payment implements IPayment {
         }
     }
 
+    /**
+     * Retrieve a PaymentIntent. Retrieves the details of a PaymentIntent that has previously been created.
+     * API Reference - https://stripe.com/docs/api/payment_intents/retrieve
+     * @param data {String}
+     * @returns 
+     */
     async getDetails(data: any): Promise<any> {
         try {
             const secretKey = StripeEnvironment.getSecretKey();
