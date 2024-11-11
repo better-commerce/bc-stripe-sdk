@@ -2,13 +2,21 @@ import { StripeEnvironment } from "../base/config/StripeEnvironment";
 import { IPayment } from "../base/contracts/IPayment";
 import { sanitizeAmount } from "../utils/app-util";
 
+/**
+ * Class {Payment} implements the IPayment interface and provides concrete implementation of all the methods.
+ * 
+ * @class Payment
+ * @implements {IPayment}
+ */
 export class Payment implements IPayment {
-
+    
     /**
      * Create a PaymentIntent. Creates a PaymentIntent object.
+     * 
      * API Reference - https://stripe.com/docs/api/payment_intents/create
+     * 
      * @param data {Object}
-     * @returns 
+     * @returns {Promise<any>}
      */
     async initIntent(data: any): Promise<any> {
         try {
@@ -23,9 +31,11 @@ export class Payment implements IPayment {
 
     /**
      * Retrieve a PaymentIntent. Retrieves the details of a PaymentIntent that has previously been created.
+     * 
      * API Reference - https://stripe.com/docs/api/payment_intents/retrieve
+     * 
      * @param data {String}
-     * @returns 
+     * @returns {Promise<any>}
      */
     async getDetails(data: any): Promise<any> {
         try {

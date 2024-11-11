@@ -16,6 +16,13 @@ export class StripeEnvironment {
      */
     static secretKey: string;
 
+    /**
+     * Initializes the StripeEnvironment with the provided public and secret keys.
+     * 
+     * @param publicKey {string} - The public key for Stripe API authentication.
+     * @param secretKey {string} - The secret key for Stripe API authentication.
+     * @returns {StripeEnvironment} - The current instance of StripeEnvironment.
+     */
     static init(publicKey: string, secretKey: string) {
         StripeEnvironment.publicKey = publicKey;
         StripeEnvironment.secretKey = secretKey;
@@ -23,16 +30,16 @@ export class StripeEnvironment {
     }
 
     /**
-     * Returns the public key.
-     * @return {string}
+     * Retrieves the public key used for Stripe API authentication.
+     * @returns {string} - The public key used for Stripe API authentication.
      */
     static getPublicKey(): string {
         return StripeEnvironment.publicKey;
     }
 
     /**
-     * Returns the secret key.
-     * @return {string}
+     * Retrieves the secret key used for Stripe API authentication.
+     * @returns {string} - The secret key used for Stripe API authentication.
      */
     static getSecretKey(): string {
         return StripeEnvironment.secretKey;
